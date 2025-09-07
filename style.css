@@ -1,6 +1,6 @@
 input::placeholder {
   color: #00ff99;   
-  opacity: 1;       
+  opacity: 0.6;       
 }
 
 body {
@@ -13,7 +13,7 @@ body {
   height: 100vh;
   margin: 0;
   opacity: 0;
-  animation: fadeInScreen 1.5s forwards
+  animation: fadeInScreen 1.5s forwards;
 }
 
 @keyframes fadeInScreen {
@@ -69,16 +69,23 @@ button:hover {
 
 #message {
   margin-top: 15px;
-  color: #ff4444;
   font-weight: bold;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.8s;
 }
 
-.hidden {
-  display: none;
+#message.visible {
+  opacity: 1;
 }
 
 #qrContainer {
-  margin-top: 30px;
+  margin-top: 25px;
+  display: none; 
+}
+
+#qrContainer.visible {
+  display: block; 
 }
 
 @keyframes flicker {
@@ -91,5 +98,16 @@ button:hover {
 }
 
 .glitch {
-  animation: flicker 0.4s linear infinite; 
+  animation: flicker 0.4s linear 3; 
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

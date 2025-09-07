@@ -8,19 +8,21 @@
 </head>
 <body>
   <div class="container">
-    <h1 id='title'></h1>
-    <p class="hint">01001000 01010101 01001110 01010100</p>
-    <p class="hint">One Key Is Never Enough. Only ASCII Will Unlock Me</p>
+    <h1 id="title"></h1>
 
-    <input type="text" id="codeInput" placeholder="Enter Access Code" />
-    <button id="submitBtn">Submit</button>
+    <div id="content">
+      <p class="hint animate">01001000 01010101 01001110 01010100</p>
+      <p class="hint animate">One Key Is Never Enough. Only ASCII Will Unlock Me</p>
+      <input type="text" id="codeInput" placeholder="Enter Access Code" class="animate" />
+      <button id="submitBtn" class="animate">Submit</button>
+    </div>
 
     <p id="message"></p>
 
-    <div id="qrContainer" class="hidden">
-      <h2>ACCESS GRANTED</h2>
-      <img src="qr.png" alt="QR Code to next stage" />
+    <div id="qrContainer">
+      <img src="qr.png" alt="QR Code" />
     </div>
+
   </div>
   <script src="script.js"></script>
 </body>
