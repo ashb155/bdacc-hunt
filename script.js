@@ -5,12 +5,11 @@ const title = document.getElementById('title');
 const contentItems = document.querySelectorAll('.animate');
 const qrContainer = document.getElementById("qrContainer");
 
-const correctCode = "HUNT";
 
 submitBtn.addEventListener("click", () => {
     const input = codeInput.value.trim().toUpperCase();
 
-    if(input === correctCode) {
+    if(input === enc1) {
         message.textContent = "ACCESS GRANTED.";
         message.style.fontSize=40
         message.style.color = "#33ffcc";  
@@ -49,3 +48,7 @@ function typeEffect(){
 
 title.textContent = "";
 typeEffect();
+
+
+const enc='REFUQQ=='
+const enc1=atob(enc)
