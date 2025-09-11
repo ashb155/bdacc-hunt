@@ -3,7 +3,6 @@ const codeInput = document.getElementById("codeInput");
 const message = document.getElementById("message");
 const title = document.getElementById('title');
 const contentItems = document.querySelectorAll('.animate');
-const qrContainer = document.getElementById("qrContainer");
 
 
 submitBtn.addEventListener("click", () => {
@@ -18,7 +17,15 @@ submitBtn.addEventListener("click", () => {
         void message.offsetWidth;
         message.classList.add('glitch');
 
-        qrContainer.classList.add('visible');
+        const stage2 = document.getElementById("stage2");
+        if(stage2){
+            title.textContent='';
+            stage2.classList.add("visible");
+            document.getElementById("content").style.display = "none";
+            stage2.scrollIntoView({ behavior: "smooth" });
+        }
+
+
     } else {
         message.textContent = "ACCESS DENIED. THE ALGORITHM WATCHES.";
         message.style.color = "#ff4444";
