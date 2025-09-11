@@ -3,36 +3,35 @@ const codeInput = document.getElementById("codeInput");
 const message = document.getElementById("message");
 const title = document.getElementById('title');
 const contentItems = document.querySelectorAll('.animate');
+const stage2 = document.getElementById("stage2");
+const stage2Items = stage2.querySelectorAll('.animate');
 
+const enc = 'REFUQQ==';
+const enc1 = atob(enc);
 
 submitBtn.addEventListener("click", () => {
     const input = codeInput.value.trim().toUpperCase();
 
     if(input === enc1) {
         message.textContent = "ACCESS GRANTED.";
-        message.style.fontSize=40
-        message.style.color = "#33ffcc";  
+        message.style.color = "#33ffcc";
         message.classList.add('visible');
         message.classList.remove('glitch');
         void message.offsetWidth;
         message.classList.add('glitch');
 
-        const stage2 = document.getElementById("stage2");
-        if(stage2){
-            title.textContent='';
-            stage2.classList.add("visible");
-            document.getElementById("content").style.display = "none";
-            stage2.scrollIntoView({ behavior: "smooth" });
-        }
+        title.textContent='';
+        document.getElementById("content").style.display = "none";
 
-
+        stage2.style.display = "block";
+        stage2Items.forEach((el, i) => {
+            setTimeout(() => el.classList.add('visible'), i * 200);
+        });
     } else {
         message.textContent = "ACCESS DENIED. THE ALGORITHM WATCHES.";
         message.style.color = "#ff4444";
         message.classList.add('visible');
         message.classList.remove('glitch');
-        
-        qrContainer.classList.remove('visible');
     }
 });
 
@@ -55,7 +54,3 @@ function typeEffect(){
 
 title.textContent = "";
 typeEffect();
-
-
-const enc='REFUQQ=='
-const enc1=atob(enc)

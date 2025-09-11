@@ -1,6 +1,6 @@
 input::placeholder {
-  color: #00ff99;   
-  opacity: 0.6;       
+  color: #00ff99;
+  opacity: 0.6;
 }
 
 body {
@@ -47,7 +47,7 @@ input {
   outline: none;
   margin-top: 15px;
   width: 220px;
-  max-width: 100%; 
+  max-width: 100%;
   text-align: center;
 }
 
@@ -79,18 +79,8 @@ button:hover {
   opacity: 1;
 }
 
-#qrContainer {
-  margin-top: 25px;
-  display: none; 
-}
-
-#qrContainer.visible {
-  display: block; 
-}
-
-#qrContainer img {
-  max-width: 90%;
-  height: auto;
+.glitch {
+  animation: flicker 0.4s linear 3; 
 }
 
 @keyframes flicker {
@@ -100,10 +90,6 @@ button:hover {
   60%  { opacity: 0.4; }
   80%  { opacity: 0.8; }
   100% { opacity: 1; }
-}
-
-.glitch {
-  animation: flicker 0.4s linear 3; 
 }
 
 .animate {
@@ -117,38 +103,11 @@ button:hover {
   transform: translateY(0);
 }
 
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-  .hint {
-    font-size: 0.9rem;
-  }
-  input, button {
-    width: 90%;
-    max-width: 280px;
-    margin: 8px 0;
-  }
-  button {
-    margin-left: 0; 
-  }
-  #message {
-    font-size: 0.95rem;
-  }
-}
-
-#stage2 {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.8s ease-in-out;
-}
-
-#stage2.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
 .fade-out {
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
+}
+
+#stage2 {
+  display: none;
 }
