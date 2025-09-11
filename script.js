@@ -12,6 +12,7 @@ submitBtn.addEventListener("click", () => {
 
     if(input === correctCode) {
         message.textContent = "ACCESS GRANTED.";
+        message.style.fontSize=40
         message.style.color = "#33ffcc";  
         message.classList.add('visible');
         message.classList.remove('glitch');
