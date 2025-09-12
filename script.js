@@ -54,3 +54,21 @@ function typeEffect(){
 
 title.textContent = "";
 typeEffect();
+
+
+const submitBtnTeam = document.getElementById("submitBtnTeam");
+const teamInput = document.getElementById("teamInput");
+
+submitBtnTeam.addEventListener("click", () => {
+  const team = teamInput.value.trim().toUpperCase();
+
+  if (["A", "B", "C"].includes(team)) {
+    message.textContent = `TEAM ${team} SELECTED.`;
+    message.style.color = "#33ffcc";
+    message.classList.add("visible");
+  } else {
+    message.textContent = "INVALID TEAM. ONLY A, B OR C.";
+    message.style.color = "#ff4444";
+    message.classList.add("visible");
+  }
+});
