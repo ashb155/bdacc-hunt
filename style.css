@@ -1,8 +1,3 @@
-input::placeholder {
-  color: #00ff99;
-  opacity: 0.6;
-}
-
 body {
   background-color: #0d0d0d;
   color: #00ff99;
@@ -14,6 +9,11 @@ body {
   margin: 0;
   opacity: 0;
   animation: fadeInScreen 1.5s forwards;
+}
+
+input::placeholder {
+  color: #00ff99;
+  opacity: 0.6;
 }
 
 @keyframes fadeInScreen {
@@ -37,33 +37,29 @@ h1 {
   margin-bottom: 20px;
 }
 
-.hint {
-  color: #33ffcc;
-  margin-bottom: 10px;
+input, button {
+  background: black;
+  color: #00ff99;
+  border: 2px solid #00ff99;
+  font-family: "Courier New", monospace;
 }
 
 input {
   padding: 10px;
   font-size: 1rem;
-  border: 3px solid #00ff99;
-  background: black;
-  color: #00ff99;
-  outline: none;
   margin-top: 15px;
   width: 220px;
   max-width: 100%;
   text-align: center;
+  outline: none;
 }
 
 button {
   margin-left: 10px;
   padding: 10px 20px;
-  background: black;
-  color: #00ff99;
-  border: 2px solid #00ff99;
   cursor: pointer;
   font-size: 1rem;
-  transition: all 0.2s ease-in-out; 
+  transition: all 0.2s ease-in-out;
 }
 
 button:hover {
@@ -81,19 +77,6 @@ button:hover {
 
 #message.visible {
   opacity: 1;
-}
-
-.glitch {
-  animation: flicker 0.4s linear 3; 
-}
-
-@keyframes flicker {
-  0%   { opacity: 1; }
-  20%  { opacity: 0.8; }
-  40%  { opacity: 0.6; }
-  60%  { opacity: 0.4; }
-  80%  { opacity: 0.8; }
-  100% { opacity: 1; }
 }
 
 .animate {
@@ -114,4 +97,5 @@ button:hover {
 
 #stage2 {
   display: none;
+  margin-top: 20px;
 }
