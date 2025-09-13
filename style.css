@@ -11,6 +11,14 @@ body {
   animation: fadeInScreen 1.5s forwards;
 }
 
+.challenge-box {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 input::placeholder {
   color: #00ff99;
   opacity: 0.6;
@@ -74,15 +82,17 @@ button:hover {
   color: black;
 }
 
-#message {
+
+#message, #message2, #message3, #message4, #message5, #message6 {
   margin-top: 15px;
   font-weight: bold;
   opacity: 0;
   text-align: center;
   transition: opacity 0.8s;
+  min-height: 24px;
 }
 
-#message.visible {
+#message.visible, #message2.visible, #message3.visible, #message4.visible, #message5.visible, #message6.visible {
   opacity: 1;
 }
 
@@ -116,4 +126,8 @@ button:hover {
     font-size: 0.9rem;
     padding: 8px;
   }
+}
+
+#hint2, #hint3, #hint4, #hint5, #hint6 {
+  display: none;
 }
