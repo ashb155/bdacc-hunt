@@ -8,6 +8,9 @@ if (initialContentItems.length > 0) {
 const enc1 = atob("REFUQQ==");
 const enc2 = atob("RUNITw==");
 const enc3 = atob("UEFUSA==");
+const enc4 = atob("UkVBRA==");
+const enc5 = atob("UExBTkU=")
+const enc6 = atob("T1ZFTg==")
 
 const title = document.getElementById("title");
 const submitBtn = document.getElementById("submitBtn");
@@ -30,6 +33,26 @@ const hint3 = document.getElementById("hint3");
 const message3 = document.getElementById("message3");
 const codeInput3 = document.getElementById("codeInput3");
 const a3Btn = document.getElementById("a3Btn");
+
+const hint4 = document.getElementById("hint4");
+const message4 = document.getElementById("message4");
+const codeInput4 = document.getElementById("codeInput4");
+const a4Btn = document.getElementById("a4Btn");
+
+const hint5 = document.getElementById('hint5');
+const message5 = document.getElementById('message5');
+const codeInput5 = document.getElementById('codeInput5');
+const a5Btn = document.getElementById('a5Btn');
+
+const hint6 = document.getElementById('hint6');
+const message6 = document.getElementById('message6');
+const codeInput6 = document.getElementById('codeInput6');
+const a6Btn = document.getElementById('a6Btn');
+
+const hint7 = document.getElementById('hint7');
+const message7 = document.getElementById('message7');
+const codeInput7 = document.getElementById('codeInput7');
+const a7Btn = document.getElementById('a7Btn');
 
 function showMessage(msgElement, text, color, glitch = false) {
   if (!msgElement) return;
@@ -102,7 +125,7 @@ if (a1Btn) {
         if (codeInput.value.trim().toUpperCase() === enc1) {
             transitionToNextStage(content, message, hint2);
         } else {
-            showMessage(message, "ACCESS DENIED. TRY AGAIN.", "#ff4444");
+            showMessage(message, "ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444");
         }
     });
 }
@@ -112,7 +135,7 @@ if (a2Btn) {
         if (codeInput2.value.trim().toUpperCase() === enc2) {
             transitionToNextStage(hint2, message2, hint3);
         } else {
-            showMessage(message2, "INCORRECT. THE ECHO FADES.", "#ff4444");
+            showMessage(message2, "ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444");
         }
     });
 }
@@ -120,9 +143,47 @@ if (a2Btn) {
 if (a3Btn) {
     a3Btn.addEventListener("click", () => {
         if (codeInput3.value.trim().toUpperCase() === enc3) {
-            showMessage(message3, "PATHWAY UNLOCKED. WELL DONE.", "#33ffcc", true);
+            transitionToNextStage(hint3, message3, hint4);
         } else {
-            showMessage(message3, "WRONG PATH. TRY AGAIN.", "#ff4444");
+            showMessage(message3,"ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444");
         }
     });
 }
+
+if (a4Btn){
+    a4Btn.addEventListener("click",()=>{
+        if(codeInput4.value.trim().toUpperCase() === enc4 ){
+            transitionToNextStage(hint4,message4,hint5);
+        }
+        else{
+            showMessage(message4,"ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444")
+        }
+    })
+}
+
+if(a5Btn){
+    a5Btn.addEventListener("click",()=>{
+        if(codeInput5.value.trim().toUpperCase()=== enc5){
+            transitionToNextStage(hint5,message5,hint6);
+        }
+         else{
+            showMessage(message5,"ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444")
+        }
+    })
+}
+
+
+if(a6Btn){
+    a6Btn.addEventListener("click",()=>{
+        if(codeInput6.value.trim().toUpperCase()=== enc6){
+           showMessage(message6,"MISSION SUCCESS", "#33ffcc")
+        
+        }
+         else{
+            showMessage(message6,"ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444")
+        }
+    })
+}
+
+
+
