@@ -5,19 +5,12 @@ if (initialContentItems.length > 0) {
   );
 }
 
-const enc1 = atob("REFUQQ==");
-const enc2 = atob("REFUQQ==");
-const enc3 = atob("REFUQQ==");
-const enc4 = atob("REFUQQ==");
-const enc5 = atob("REFUQQ==");
-const enc6 = atob("REFUQQ==");
-
-const title = document.getElementById("title");
-const submitBtn = document.getElementById("submitBtn");
-const stage2 = document.getElementById("stage2");
-const stage2Items = stage2 ? stage2.querySelectorAll(".animate") : [];
-const submitBtnTeam = document.getElementById("submitBtnTeam");
-const teamInput = document.getElementById("teamInput");
+const enc1 = atob("REFUQQ==");    
+const enc2 = atob("REFUQQ==");   
+const enc3 = atob("REFUQQ==");  
+const enc4 = atob("REFUQQ==");   
+const enc5 = atob("REFUQQ=="); 
+const enc6 = atob("REFUQQ==");  
 
 const content = document.getElementById("content");
 const message = document.getElementById("message");
@@ -39,15 +32,16 @@ const message4 = document.getElementById("message4");
 const codeInput4 = document.getElementById("codeInput4");
 const a4Btn = document.getElementById("a4Btn");
 
-const hint5 = document.getElementById('hint5');
-const message5 = document.getElementById('message5');
-const codeInput5 = document.getElementById('codeInput5');
-const a5Btn = document.getElementById('a5Btn');
+const hint5 = document.getElementById("hint5");
+const message5 = document.getElementById("message5");
+const codeInput5 = document.getElementById("codeInput5");
+const a5Btn = document.getElementById("a5Btn");
 
-const hint6 = document.getElementById('hint6');
-const message6 = document.getElementById('message6');
-const codeInput6 = document.getElementById('codeInput6');
-const a6Btn = document.getElementById('a6Btn');
+const hint6 = document.getElementById("hint6");
+const message6 = document.getElementById("message6");
+const codeInput6 = document.getElementById("codeInput6");
+const a6Btn = document.getElementById("a6Btn");
+
 
 function showMessage(msgElement, text, color, glitch = false) {
   if (!msgElement) return;
@@ -78,49 +72,12 @@ function transitionToNextStage(currentHint, currentMessage, nextHint) {
     }, 1500);
 }
 
-if (submitBtn && codeInput && title) {
-    submitBtn.addEventListener("click", () => {
-        const input = codeInput.value.trim().toUpperCase();
-        if (input === enc1) {
-            showMessage(message, "ACCESS GRANTED.", "#33ffcc", true);
-            title.textContent = "";
-            content.style.display = "none";
-            stage2.style.display = "block";
-            stage2Items.forEach((el, i) =>
-                setTimeout(() => el.classList.add("visible"), i * 200)
-            );
-        } else {
-            showMessage(message, "ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444");
-        }
-    });
-
-    const text = "THE ALGORITHM IS AWAKE";
-    let index = 0;
-    (function typeEffect() {
-        if (index < text.length) {
-            title.textContent += text.charAt(index++);
-            setTimeout(typeEffect, 80);
-        }
-    })();
-}
-
-if (submitBtnTeam && teamInput) {
-    submitBtnTeam.addEventListener("click", () => {
-        const team = teamInput.value.trim().toUpperCase();
-        if (["A", "B", "C"].includes(team)) {
-            window.location.href = `${team.toLowerCase()}.html`;
-        } else {
-            showMessage(message, "INVALID TEAM. ONLY A, B OR C.", "#ff4444");
-        }
-    });
-}
-
 if (a1Btn) {
     a1Btn.addEventListener("click", () => {
         if (codeInput.value.trim().toUpperCase() === enc1) {
             transitionToNextStage(content, message, hint2);
         } else {
-            showMessage(message, "ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444");
+            showMessage(message, "ACCESS DENIED.", "#ff4444");
         }
     });
 }
@@ -130,7 +87,7 @@ if (a2Btn) {
         if (codeInput2.value.trim().toUpperCase() === enc2) {
             transitionToNextStage(hint2, message2, hint3);
         } else {
-            showMessage(message2, "ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444");
+            showMessage(message2, "ACCESS DENIED.", "#ff4444");
         }
     });
 }
@@ -140,7 +97,7 @@ if (a3Btn) {
         if (codeInput3.value.trim().toUpperCase() === enc3) {
             transitionToNextStage(hint3, message3, hint4);
         } else {
-            showMessage(message3,"ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444");
+            showMessage(message3,"ACCESS DENIED.", "#ff4444");
         }
     });
 }
@@ -151,7 +108,7 @@ if (a4Btn){
             transitionToNextStage(hint4,message4,hint5);
         }
         else{
-            showMessage(message4,"ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444")
+            showMessage(message4,"ACCESS DENIED.", "#ff4444")
         }
     })
 }
@@ -162,7 +119,7 @@ if(a5Btn){
             transitionToNextStage(hint5,message5,hint6);
         }
          else{
-            showMessage(message5,"ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444")
+            showMessage(message5,"ACCESS DENIED.", "#ff4444")
         }
     })
 }
@@ -170,10 +127,10 @@ if(a5Btn){
 if(a6Btn){
     a6Btn.addEventListener("click",()=>{
         if(codeInput6.value.trim().toUpperCase()=== enc6){
-           showMessage(message6,"MISSION SUCCESS", "#33ffcc", true);
+           showMessage(message6,"MISSION SUCCESS", "#33ffcc", true)
         }
          else{
-            showMessage(message6,"ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444")
+            showMessage(message6,"ACCESS DENIED.", "#ff4444")
         }
     })
 }
