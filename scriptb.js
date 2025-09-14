@@ -10,7 +10,7 @@ const enc2 = atob("NjU=")
 const enc3 = atob("MDI2NQ==");
 const enc4 = atob("REFUQQ==");   
 const enc5 = atob("MzE="); 
-const enc6 = atob("UmFuZG9tc3RhdGU9NDI=");  
+const enc6 = atob("UkFORE9NU1RBVEU9NDI=");
 
 const content = document.getElementById("content");
 const message = document.getElementById("message");
@@ -77,7 +77,7 @@ if (a1Btn) {
         if (codeInput.value.trim().toUpperCase() === enc1) {
             transitionToNextStage(content, message, hint2);
         } else {
-            showMessage(message, "ACCESS DENIED.", "#ff4444");
+            showMessage(message, "ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444");
         }
     });
 }
@@ -87,7 +87,7 @@ if (a2Btn) {
         if (codeInput2.value.trim().toUpperCase() === enc2) {
             transitionToNextStage(hint2, message2, hint3);
         } else {
-            showMessage(message2, "ACCESS DENIED.", "#ff4444");
+            showMessage(message2, "ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444");
         }
     });
 }
@@ -97,7 +97,7 @@ if (a3Btn) {
         if (codeInput3.value.trim().toUpperCase() === enc3) {
             transitionToNextStage(hint3, message3, hint4);
         } else {
-            showMessage(message3,"ACCESS DENIED.", "#ff4444");
+            showMessage(message3,"ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444");
         }
     });
 }
@@ -108,7 +108,7 @@ if (a4Btn){
             transitionToNextStage(hint4,message4,hint5);
         }
         else{
-            showMessage(message4,"ACCESS DENIED.", "#ff4444")
+            showMessage(message4,"ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444")
         }
     })
 }
@@ -119,18 +119,18 @@ if(a5Btn){
             transitionToNextStage(hint5,message5,hint6);
         }
          else{
-            showMessage(message5,"ACCESS DENIED.", "#ff4444")
+            showMessage(message5,"ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444")
         }
     })
 }
 
-if(a6Btn){
-    a6Btn.addEventListener("click",()=>{
-        if(codeInput6.value.trim().toUpperCase()=== enc6){
-           showMessage(message6,"MISSION SUCCESS", "#33ffcc", true)
+if (a6Btn) {
+    a6Btn.addEventListener("click", () => {
+
+        if (codeInput6.value.trim().toUpperCase() === enc6.toUpperCase()) {
+            showMessage(message6, "MISSION SUCCESS", "#33ffcc", true);
+        } else {
+            showMessage(message6, "ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444");
         }
-         else{
-            showMessage(message6,"ACCESS DENIED.", "#ff4444")
-        }
-    })
+    });
 }
