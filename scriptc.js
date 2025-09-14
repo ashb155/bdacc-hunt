@@ -5,12 +5,12 @@ if (initialContentItems.length > 0) {
   );
 }
 
-const enc1 = atob("REFUQQ==");    
-const enc2 = atob("REFUQQ==");   
-const enc3 = atob("REFUQQ==");  
-const enc4 = atob("REFUQQ==");   
-const enc5 = atob("REFUQQ=="); 
-const enc6 = atob("REFUQQ==");  
+const enc1 = atob("NjU=");    
+const enc2 = atob("MDI2NQ==");   
+const enc3 = atob("U1RSVUNUVVJFRFFVRVJZTEFOR1VBR0U=");  
+const enc4 = atob("SVRN");   
+const enc5 = atob("MzE="); 
+const enc6 = atob("RUY1");  
 
 const content = document.getElementById("content");
 const message = document.getElementById("message");
