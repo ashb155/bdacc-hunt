@@ -5,10 +5,10 @@ if (initialContentItems.length > 0) {
   );
 }
 
-const enc1 = atob("NDI3Njg=");
+const enc1 = atob("TklUVzVH");
 const enc2 = atob("NjU=")   
 const enc3 = atob("MDI2NQ==");
-const enc4 = atob("REFUQQ==");   
+const enc4 = atob("SVRN");
 const enc5 = atob("MzE="); 
 const enc6 = atob("UkFORE9NU1RBVEU9NDI=");
 
@@ -128,7 +128,7 @@ if (a6Btn) {
     a6Btn.addEventListener("click", () => {
 
         if (codeInput6.value.trim().toUpperCase() === enc6.toUpperCase()) {
-            showMessage(message6, "MISSION SUCCESS", "#33ffcc", true);
+            showMessage(message6, "MISSION SUCCESS. RETURN TO E&ICT C301", "#33ffcc", true);
         } else {
             showMessage(message6, "ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444");
         }

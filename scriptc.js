@@ -5,10 +5,10 @@ if (initialContentItems.length > 0) {
   );
 }
 
-const enc1 = atob("NjU=");    
+const enc1 = atob("NjU=") ;
 const enc2 = atob("MDI2NQ==");   
 const enc3 = atob("U1RSVUNUVVJFRFFVRVJZTEFOR1VBR0U=");  
-const enc4 = atob("SVRN");   
+const enc4 = atob("NDI3Njg=");   
 const enc5 = atob("MzE="); 
 const enc6 = atob("RUY1");  
 
@@ -74,10 +74,12 @@ function transitionToNextStage(currentHint, currentMessage, nextHint) {
 
 if (a1Btn) {
     a1Btn.addEventListener("click", () => {
+        console.log(codeInput);
+        console.log(enc1);
         if (codeInput.value.trim().toUpperCase() === enc1) {
             transitionToNextStage(content, message, hint2);
         } else {
-            showMessage(message, "ACCESS DENIED.", "#ff4444");
+            showMessage(message, "ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444");
         }
     });
 }
@@ -87,7 +89,7 @@ if (a2Btn) {
         if (codeInput2.value.trim().toUpperCase() === enc2) {
             transitionToNextStage(hint2, message2, hint3);
         } else {
-            showMessage(message2, "ACCESS DENIED.", "#ff4444");
+            showMessage(message2, "ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444");
         }
     });
 }
@@ -97,7 +99,7 @@ if (a3Btn) {
         if (codeInput3.value.trim().toUpperCase() === enc3) {
             transitionToNextStage(hint3, message3, hint4);
         } else {
-            showMessage(message3,"ACCESS DENIED.", "#ff4444");
+            showMessage(message3,"ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444");
         }
     });
 }
@@ -108,7 +110,7 @@ if (a4Btn){
             transitionToNextStage(hint4,message4,hint5);
         }
         else{
-            showMessage(message4,"ACCESS DENIED.", "#ff4444")
+            showMessage(message4,"ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444")
         }
     })
 }
@@ -119,7 +121,7 @@ if(a5Btn){
             transitionToNextStage(hint5,message5,hint6);
         }
          else{
-            showMessage(message5,"ACCESS DENIED.", "#ff4444")
+            showMessage(message5,"ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444")
         }
     })
 }
@@ -127,10 +129,10 @@ if(a5Btn){
 if(a6Btn){
     a6Btn.addEventListener("click",()=>{
         if(codeInput6.value.trim().toUpperCase()=== enc6){
-           showMessage(message6,"MISSION SUCCESS", "#33ffcc", true)
+           showMessage(message6,"MISSION SUCCESS. RETURN TO E&ICT C301", "#33ffcc", true)
         }
          else{
-            showMessage(message6,"ACCESS DENIED.", "#ff4444")
+            showMessage(message6,"ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444")
         }
     })
 }

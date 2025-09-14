@@ -167,7 +167,7 @@ if(a5Btn){
 if(a6Btn){
     a6Btn.addEventListener("click",()=>{
         if(codeInput6.value.trim().toUpperCase()=== enc6){
-           showMessage(message6,"MISSION SUCCESS", "#33ffcc", true);
+           showMessage(message6,"MISSION SUCCESS. RETURN TO E&ICT C301", "#33ffcc", true);
         }
          else{
             showMessage(message6,"ACCESS DENIED. THE ALGORITHM WATCHES.", "#ff4444")
@@ -180,6 +180,6 @@ const enc = atob("REFUQQ==");
 const enc1 = atob("MzE=");
 const enc2 = atob("MTk1OQ==");
 const enc3 = atob("U1RSVUNUVVJFRFFVRVJZTEFOR1VBR0U=");
-const enc4 = atob("SVRN");
+const enc4 = atob("TklUVzVH");
 const enc5 = atob("NDI3Njg=");
 const enc6 = atob("RUY1");
