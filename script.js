@@ -5,14 +5,6 @@ if (initialContentItems.length > 0) {
   );
 }
 
-const enc = atob("REFUQQ==");
-const enc1 = atob("MTE=");
-const enc2 = atob("MTk1OQ==");
-const enc3 = atob("U1RSVUNUVVJFRFFVRVJZTEFOR1VBR0U=");
-const enc4 = atob("SVRN");
-const enc5 = atob("NDI3Njg=");
-const enc6 = atob("RUY1");
-
 const title = document.getElementById("title");
 const submitBtn = document.getElementById("submitBtn");
 const stage2 = document.getElementById("stage2");
@@ -182,3 +174,12 @@ if(a6Btn){
         }
     })
 }
+
+
+const enc = atob("REFUQQ==");
+const enc1 = atob("MzE=");
+const enc2 = atob("MTk1OQ==");
+const enc3 = atob("U1RSVUNUVVJFRFFVRVJZTEFOR1VBR0U=");
+const enc4 = atob("SVRN");
+const enc5 = atob("NDI3Njg=");
+const enc6 = atob("RUY1");
