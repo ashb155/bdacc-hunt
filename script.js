@@ -5,12 +5,13 @@ if (initialContentItems.length > 0) {
   );
 }
 
-const enc1 = atob("REFUQQ==");
-const enc2 = atob("REFUQQ==");
-const enc3 = atob("REFUQQ==");
-const enc4 = atob("REFUQQ==");
-const enc5 = atob("REFUQQ==");
-const enc6 = atob("REFUQQ==");
+const enc = atob("REFUQQ==");
+const enc1 = atob("MTE=");
+const enc2 = atob("MTk1OQ==");
+const enc3 = atob("U1RSVUNUVVJFRFFVRVJZTEFOR1VBR0U=");
+const enc4 = atob("SVRN");
+const enc5 = atob("NDI3Njg=");
+const enc6 = atob("RUY1");
 
 const title = document.getElementById("title");
 const submitBtn = document.getElementById("submitBtn");
@@ -81,11 +82,15 @@ function transitionToNextStage(currentHint, currentMessage, nextHint) {
 if (submitBtn && codeInput && title) {
     submitBtn.addEventListener("click", () => {
         const input = codeInput.value.trim().toUpperCase();
-        if (input === enc1) {
-            showMessage(message, "ACCESS GRANTED.", "#33ffcc", true);
+        if (input === enc) {
             title.textContent = "";
             content.style.display = "none";
+            if (message) message.style.display = "none";
+            
             stage2.style.display = "block";
+            
+            showMessage(message2, "ACCESS GRANTED.", "#33ffcc", true);
+            
             stage2Items.forEach((el, i) =>
                 setTimeout(() => el.classList.add("visible"), i * 200)
             );
@@ -110,7 +115,7 @@ if (submitBtnTeam && teamInput) {
         if (["A", "B", "C"].includes(team)) {
             window.location.href = `${team.toLowerCase()}.html`;
         } else {
-            showMessage(message, "INVALID TEAM. ONLY A, B OR C.", "#ff4444");
+            showMessage(message2, "INVALID TEAM. ONLY A, B OR C.", "#ff4444");
         }
     });
 }
